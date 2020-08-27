@@ -1,4 +1,4 @@
-# Reproduction for [joelwmale/webhook-action#17](https://github.com/joelwmale/webhook-action/issues/17)
+# ✅ Reproduction for [joelwmale/webhook-action#17](https://github.com/joelwmale/webhook-action/issues/17)
 
 This repository contains a reproducable version for the issue https://github.com/joelwmale/webhook-action/issues/17.
 
