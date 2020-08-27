@@ -1,0 +1,21 @@
+name: Webhook Action Test
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: Test it out
+    runs-on: ubuntu-18.04
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Trigger webhook
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.EXAMPLE_URL }}
